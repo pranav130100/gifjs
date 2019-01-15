@@ -30,6 +30,8 @@ Code can now be embedded into existing gif files by using the flag `-i` with a g
 Example:  
 `$ ./gifjs gif code.js -i giffile.gif`
 
+Usage of GIF file as script is as simple as :
+`$ <script src="giffile.gif">`
 
 Background:
 -----------
