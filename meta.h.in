@@ -1,0 +1,9 @@
+/*
+File: meta.h
+Project: gifJs
+Author: Pranav M S
+*/
+
+
+#define VERSION @VERSION@
+#define AUTHOR @AUTHOR@
