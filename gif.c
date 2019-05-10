@@ -17,11 +17,11 @@ char *gif_js(char *content, int size){
 
 char *gif_js_i(char *content, int csize, char *image, int isize){
 	const char _gif_header[8] = {0x47, 0x49, 0x46, 0x38, 0x39, 0x61, 0x2f, 0x2a};
-	const char _gif_header_end[GIFJSHEAD_I] = {0x2a, 0x2f, 0x3d, 0x30, 0x3b, 0x0a};
-	char *buffer = (char*)malloc(csize + isize + GIFJSHEAD_I);
+	const char _gif_header_end[GIFJSHEAD_E] = {0x2a, 0x2f, 0x3d, 0x30, 0x3b, 0x0a};
+	char *buffer = (char*)malloc(csize + isize + GIFJSHEAD_E);
 	memcpy(buffer, _gif_header, 8);
 	memcpy(&buffer[8], &image[8], isize - 8);
-	memcpy(&buffer[isize], _gif_header_end, GIFJSHEAD_I);
+	memcpy(&buffer[isize], _gif_header_end, GIFJSHEAD_E);
 	memcpy(&buffer[isize + GIFJSHEAD_I], content, csize);
 	return buffer;
 }
